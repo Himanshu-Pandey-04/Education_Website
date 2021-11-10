@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="static/css/myCss.css" rel="stylesheet" />
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="static/css/customIndex.css" rel="stylesheet" />
+    <link href="static/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="First HTML Program" />
+    <title>EngineersHubs.com</title>
+    <link rel="stylesheet" href="/templates/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar Start -->
+    <div id="navbar"></div>
+    <script>
+      $(function () {
+        $("#navbar").load("/templates/navbar.html");
+      });
+    </script>
+    <!-- Navigation Bar End -->
+
+    <!-- Side Bar Start -->
+    <div id="sidebar"></div>
+    <script>
+      $(function () {
+        $("#sidebar").load("/templates/sidebar.html");
+      });
+    </script>
+    <!-- Side Bar End -->
+
+    <div class="home-section">
+      <!-- Page Header start -->
+      <div class="content-path">
+        <div class="path">
+          <a href=""> Data Structures and Algorithms >></a>
+          <a href=""> Algorithms >></a>
+          <a href=""> Non-Linear >></a>
+          <a href=""> Prim's Shortest Path Algorithm</a>
+        </div>
+      </div>
+      <div class="heading">
+        <h1 class="header">Prim's Shortest Path Algorithm</h1>
+      </div>
+      <div class="Image"><img src="/images/background/content1.png" /></div>
+      <!-- Page Header end -->
+      <!-- <table class="table">
+        <tr>
+          <td><a href="">Description</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Algorithm</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Pseudo Code</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Flow Chart</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Try it Yourself - Code Editor</a></td>
+        </tr>
+        <tr>
+          <td><a href="">Programs</a></td>
+        </tr>
+      </table> -->
+      <div class="index">
+        <div class="index-eles">
+          <a href="">Introduction</a>
+        </div>
+        <div class="index-eles">
+          <a href="">Algorithm</a>
+        </div>
+        <div class="index-eles">
+          <a href="">Pseudo Code</a>
+        </div>
+        <div class="index-eles">
+          <a href="">Flow Chart</a>
+        </div>
+        <div class="index-eles">
+          <a href="">Try it Yourself - Code Editor</a>
+        </div>
+        <div class="index-eles">
+          <a href="">Programs</a>
+        </div>
+      </div>
+      <div class="description" id="description">
+        <div class="sub-heading">1. Introduction</div>
+        <div class="sub-content">
+          Training deep learning models can take days or weeks, but how long is
+          long enough? Your model likely won’t be learning after some point, and
+          continuing the training session costs you both time and money. Picture
+          this — you’re training a large image recognition model for many
+          epochs, and hope to get a usable model. After a couple of dozens of
+          epochs, the loss isn’t decreasing, and the accuracy isn’t increasing.
+          Training for longer without tweaking the parameters first is, you’ve
+          guessed it, a waste of time. Thankfully, there’s a solution, and it’s
+          built into TensorFlow API. It’s named callbacks and represents special
+          functions executed during model training. You can use them to save
+          models, save training logs, reduce the learning rate if the model is
+          stuck, and much more. Don’t feel like reading? Watch my video instead:
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum mollitia,
+          esse ducimus quo dolore, corrupti est ab a vero nihil incidunt, sequi
+          dolorem. Eligendi omnis, voluptatem eos delectus soluta hic. Soluta
+          illum voluptatum eum. Explicabo totam est eveniet temporibus quasi,
+          delectus nemo ex voluptatum rem. Et aliquam libero, doloremque vitae
+          aliquid, corrupti repudiandae animi mollitia itaque veniam quas ipsum
+          laudantium quisquam esse consectetur atque delectus nihil, dolorum
+          quod repellendus iusto labore dignissimos voluptatum. Sit ducimus,
+          natus tempore culpa fugiat illo veritatis doloremque animi impedit
+          autem commodi reprehenderit, at ab a unde voluptate ex quo! Vel sed
+          suscipit ullam voluptatibus ipsam alias possimus cumque ducimus ipsa
+          laborum aperiam, nihil hic repellendus natus explicabo libero numquam,
+          labore debitis reprehenderit inventore nam. Cupiditate impedit soluta
+          eum autem praesentium sit provident sequi tempora non, voluptates quae
+          magnam earum dolores nisi exercitationem repudiandae. Dolore, nesciunt
+          molestiae voluptatum consequatur iure debitis, officiis laudantium
+          adipisci ex animi consectetur quos. Praesentium mollitia accusantium
+          iusto. Beatae quos modi ducimus ipsa magnam aut aspernatur iusto
+          deleniti maiores ratione perferendis, nobis totam, quam laboriosam
+          consequatur aliquid! Quia perferendis cum delectus est in natus
+          eveniet officia quod, accusantium error id nisi voluptatibus officiis
+          voluptatum quas! Molestias aspernatur eligendi esse, id iste ex
+          officiis eos culpa dignissimos ratione architecto est suscipit ducimus
+          perspiciatis praesentium cupiditate in et assumenda vero! Consectetur
+          rerum eum laboriosam tenetur deserunt ea illum eos cumque at inventore
+          accusantium pariatur officiis vel sequi magnam asperiores placeat odit
+          quisquam, explicabo nostrum fuga consequatur est. Animi voluptatibus
+          illo ducimus porro nulla sint officia id temporibus, veritatis
+          laboriosam, eius suscipit voluptatem iusto optio, odit enim. Natus
+          quas aliquam voluptatum ut, fuga soluta minima vero dignissimos neque
+          magnam atque magni expedita quo aspernatur consequuntur doloremque
+          blanditiis molestias maxime! Iure in quasi officiis? Quidem aliquam
+          temporibus officia saepe ullam incidunt! Beatae nihil minima velit
+          quam?
+        </div>
+      </div>
+      <div class="algorithm">
+        <div class="sub-heading"></div>
+        <div class="sub-content"></div>
+      </div>
+      <div class="pseudo-code"></div>
+      <div class="flow-chart"></div>
+
+      <!-- Try Yourself -->
+      <div class="code-editor"></div>
+
+      <div class="programs">
+        <!-- Code + Output + Output Snippets(Optional) -->
+
+        <div class="cpp"></div>
+        <div class="python"></div>
+        <div class="java"></div>
+      </div>
+    </div>
+  </body>
+</html>

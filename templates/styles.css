@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.home-section {
+  position: absolute;
+  background: #ffffff;
+  min-height: 100vh;
+  top: 15vh;
+  left: 13vh;
+  width: 75%;
+  padding-left: 10%;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+/* .sidebar.open ~ .home-section {
+  left: 50vh;
+  width: calc(100% - 50vh);
+} */
+.home-section .text {
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px;
+}
+
+.home-section .content-path {
+  background-color: teal;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.home-section .content-path .path {
+  padding: 1vh 1vh 1vh 1vh;
+}
+.home-section .content-path .path a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 2.7vh;
+  font-weight: 800px;
+  border-radius: 0 70px 70px 0;
+}
+
+.home-section .content-path .path a:hover {
+  text-decoration: underline;
+  color: greenyellow;
+}
+
+.home-section .heading {
+  background-color: rgb(255, 255, 255); /*rgb(18, 0, 66);*/
+  position: relative;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  display: flex;
+  padding: 3px 0px 3px 10px;
+}
+
+.home-section .heading .header {
+  color: #3b3b3b;
+  padding-top: 50px;
+  font-size: 46px;
+  font-weight: 700;
+}
+
+.home-section .Image img {
+  width: 100%;
+  height: 500px;
+}
+
+.home-section .index {
+  margin: 50px 0 50px 0;
+  align-items: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flexbox;
+  /* max-width: 500px; */
+}
+
+.home-section .index .index-eles {
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  border-top: 0.05vh solid cyan;
+  padding: 5px 0px 5px 0px;
+  justify-content: center;
+  display: flex;
+}
+
+.home-section .index .index-eles:first-child {
+  border-radius: 70px 70px 0px 0px;
+  background-color: black;
+}
+.home-section .index .index-eles:last-child {
+  border-radius: 0px 0px 70px 70px;
+}
+
+.home-section .index .index-eles:hover {
+  background-color: rgb(17, 5, 129);
+  letter-spacing: 0.1vh;
+}
+
+.home-section .index .index-eles a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3vh;
+  font-weight: 700;
+  color: cyan;
+  text-decoration: none;
+}
+
+.home-section .index .index-eles:hover a {
+  color: rgb(255, 71, 71);
+  font-size: 3.2vh;
+  transition: all 0.2s ease;
+}
+
+.home-section .description {
+  margin: 10px 0 0 5%;
+  width: 90%;
+  background: white;
+  padding: 10px;
+  color: #11101d;
+  font-size: 21px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 20px;
+}
+
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr {
+  font-size: 3vh;
+  font-weight: 500;
+}
+
+tr a {
+  color: rgb(0, 0, 0);
+}
+tr:nth-child(even) {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(238, 238, 238);
+}
+tr:nth-child(odd) {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(223, 223, 223);
+}
+
+tr:hover {
+  background-color: rgb(49, 41, 41);
+  border-radius: 10px;
+}
+tr:hover a {
+  color: rgb(0, 180, 180);
+  cursor: pointer;
+}
+
+.home-section .sub-heading {
+  font: 800 5vh bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 30px 0px 30px 0px;
+}
+
+.home-section .sub-content {
+  padding-left: 8vh;
+  font-weight: 400;
+  font-size: 2.8vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
