@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read Text File</title>
+  </head>
+
+  <body>
+    <div class="inputs">
+      <input type="file" name="inputfile" id="inputfile" />
+      <br />
+
+      <pre id="output"></pre>
+    </div>
+    <script type="text/javascript">
+      const loadCode = (difficulty, lang) => {
+        const fs = require("fs");
+        fs.readFile(`${difficulty}.${lang}`, (err, data) => {
+          console.log(data.toString());
+          document.getElementById("output").innerText = data.toString();
+        });
+      };
+
+      loadCode(1, "cpp");
+
+      const readChosenFile = () => {
+        document
+          .getElementById("inputfile")
+          .addEventListener("change", function () {
+            var fr = new FileReader();
+            fr.onload = function () {
+              document.getElementById("output").textContent = fr.result;
+            };
+
+            fr.readAsText(this.files[0]);
+          });
+      };
+    </script>
+
+    <style>
+      .inputs {
+        background-color: black;
+      }
+
+      #inputfile {
+        color: rgb(0, 255, 0);
+      }
+    </style>
+  </body>
+</html>

@@ -12,6 +12,11 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
+::selection {
+  color: rgb(205, 131, 255);
+  background: rgb(0, 0, 0);
+}
+
 .home-section {
   position: absolute;
   background: #ffffff;
@@ -19,7 +24,8 @@ body {
   top: 15vh;
   left: 13vh;
   width: 75%;
-  padding-left: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   transition: all 0.2s ease;
   z-index: 2;
 }
@@ -186,4 +192,156 @@ tr:hover a {
   font-weight: 400;
   font-size: 2.8vh;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.programs {
+  display: flex;
+}
+
+.codes-displayer {
+  display: block;
+  width: 80ch;
+  min-width: 45ch;
+  max-width: 80ch;
+  align-items: center;
+  justify-content: center;
+  padding: 1ch;
+  background-color: inherit;
+}
+
+.codes-displayer .langs-selector {
+  margin: 0 3ch 0 3ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5ch;
+  background-color: black;
+  border-radius: 10px 10px 0 0;
+}
+
+.codes-displayer .langs-selector .option {
+  padding: 0.3ch 2ch;
+  margin: 0 0.1ch;
+  border-radius: 5px;
+  border: 0.11ch solid black;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 1.7ch;
+  cursor: pointer;
+}
+
+.codes-displayer .langs-selector .option:hover {
+  background-color: rgb(153, 0, 255);
+  /* color: rgb(0, 0, 0); */
+}
+
+.codes-displayer .inner-area {
+  height: 80ch;
+  background-color: inherit;
+  display: flex;
+}
+
+.codes-displayer .inner-area .utility-options {
+  width: 5ch;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3ch;
+  border-radius: 23px 0px 0px 23px;
+  background-color: black;
+}
+
+.codes-displayer .inner-area .utility-options .option {
+  margin: 0.1ch;
+  padding: 2ch 0.2ch;
+  border: 0.1ch solid greenyellow;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: 600;
+  font-size: 5ch;
+  cursor: pointer;
+}
+
+.codes-displayer .inner-area .utility-options .option i {
+  font-size: 5ch;
+  background-color: grey;
+}
+
+.codes-displayer .inner-area .code {
+  width: 100%;
+  padding: 0.2ch;
+  background-color: black;
+}
+
+.codes-displayer .inner-area .code textarea {
+  margin: 0.2ch;
+  padding: 1ch;
+  height: 99%;
+  width: 99%;
+  background-color: rgb(255, 255, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.6ch;
+  font-weight: 500;
+  letter-spacing: 0.05ch;
+}
+
+.codes-displayer .inner-area .level-selector {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.5ch;
+  padding-top: 3ch;
+  border-radius: 0px 23px 23px 0px;
+  background-color: black;
+}
+
+.codes-displayer .inner-area .level-selector .option {
+  padding: 2ch 0.3ch;
+  margin: 0.2ch;
+  border-radius: 5px;
+  border: 0.11ch solid black;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 1.7ch;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  cursor: pointer;
+}
+
+.codes-displayer .inner-area .level-selector .option:hover {
+  background-color: rgb(153, 0, 255);
+  color: rgb(0, 0, 0);
+}
+
+.codes-displayer .output {
+  margin: 1ch;
+  padding: 1ch 3ch 1ch 1ch;
+  height: 80ch;
+  background-color: rgb(255, 255, 255);
+}
+
+.codes-displayer .output .title {
+  width: 100%;
+  height: 5ch;
+  padding: 1ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.codes-displayer .output textarea {
+  /* overflow-y: scroll; */
+  width: 100%;
+  min-height: 25ch;
+  max-height: 40ch;
+  padding: 3ch 1ch;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(240, 240, 240);
+  font-size: 1.5ch;
+  font-weight: 500;
+  letter-spacing: 0.05ch;
 }

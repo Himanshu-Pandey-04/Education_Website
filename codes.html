@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="codes-displayer">
+      <div class="langs-selector" id="langs-selector" name="langs-selector">
+        <p class="option">C</p>
+        <p class="option">C++</p>
+        <p class="option">Java</p>
+        <p class="option">Python</p>
+        <p class="option">C#</p>
+      </div>
+
+      <div class="inner-area">
+        <span class="utility-options">
+          <a class="option" id="copy"><i class="fa fa-search"></i></a>
+          <a class="option" id="opt2"></a>
+          <a class="option" id="opt3"></a>
+        </span>
+
+        <span class="code">
+          <textarea id="program" name="program">
+            // C++ program to sort Linked List
+            // using Bubble Sort
+            // by swapping nodes
+
+            #include <iostream>
+            using namespace std;
+
+            /* structure for a node */
+            struct Node
+            {
+                int data;
+                struct Node* next;
+            } Node;
+
+            /*Function to swap the nodes */
+            struct Node* swap(struct Node* ptr1, struct Node* ptr2)
+            {
+                struct Node* tmp = ptr2->next;
+                ptr2->next = ptr1;
+                ptr1->next = tmp;
+                return ptr2;
+            }
+
+            /* Function to sort the list */
+            int bubbleSort(struct Node** head, int count)
+            {
+                struct Node** h;
+                int i, j, swapped;
+
+                for (i = 0; i <= count; i++)
+                {
+
+                    h = head;
+                    swapped = 0;
+
+                    for (j = 0; j < count - i - 1; j++)
+                    {
+
+                        struct Node* p1 = *h;
+                        struct Node* p2 = p1->next;
+
+                        if (p1->data > p2->data)
+                        {
+
+                            /* update the link after swapping */
+                            *h = swap(p1, p2);
+                            swapped = 1;
+                        }
+
+                        h = &(*h)->next;
+                    }
+
+                    /* break if the loop ended without any swap */
+                    if (swapped == 0)
+                        break;
+                }
+            }
+
+            /* Function to print the list */
+            void printList(struct Node* n)
+            {
+                while (n != NULL)
+                {
+                    cout << n->data << " -> ";
+                    n = n->next;
+                }
+                cout << endl;
+            }
+
+            /* Function to insert a struct Node
+            at the beginning of a linked list */
+            void insertAtTheBegin(struct Node** start_ref, int data)
+            {
+                struct Node* ptr1
+                    = (struct Node*)malloc(sizeof(struct Node));
+
+                ptr1->data = data;
+                ptr1->next = *start_ref;
+                *start_ref = ptr1;
+            }
+
+            // Driver Code
+            int main()
+            {
+                int arr[] = { 78, 20, 10, 32, 1, 5 };
+                int list_size, i;
+
+                /* start with empty linked list */
+                struct Node* start = NULL;
+                list_size = sizeof(arr) / sizeof(arr[0]);
+
+                /* Create linked list from the array arr[] */
+                for (i = 0; i < list_size; i++)
+                    insertAtTheBegin(&start, arr[i]);
+
+                /* print list before sorting */
+                cout <<"Linked list before sorting\n";
+                printList(start);
+
+                /* sort the linked list */
+                bubbleSort(&start, list_size);
+
+                /* print list after sorting */
+                cout <<"Linked list after sorting\n";
+                printList(start);
+
+                return 0;
+            }
+
+            // This code is contributed by
+            // Himanshu Pandey
+          </textarea>
+        </span>
+
+        <span class="level-selector">
+          <p class="option">Beginner</p>
+          <p class="option">Amateur</p>
+          <p class="option">Expert</p>
+        </span>
+      </div>
+
+      <div class="output">
+        <div class="title"><h3>Output</h3></div>
+
+        <textarea readonly id="output" class="output">
+            Linked list before sorting
+            5 -> 1 -> 32 -> 10 -> 20 -> 78 -> 
+            Linked list after sorting
+            1 -> 5 -> 10 -> 20 -> 32 -> 78 ->
+        </textarea>
+      </div>
+    </div>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css?family=Poppins:400;500;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        display: flex;
+      }
+
+      .codes-displayer {
+        display: block;
+        width: 80ch;
+        min-width: 50ch;
+        max-width: 80ch;
+        align-items: center;
+        justify-content: center;
+        padding: 1ch;
+        background-color: inherit;
+      }
+
+      .codes-displayer .langs-selector {
+        margin: 0 3ch 0 3ch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5ch;
+        background-color: black;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .codes-displayer .langs-selector .option {
+        padding: 0.3ch 2ch;
+        margin: 0 0.1ch;
+        border-radius: 5px;
+        border: 0.11ch solid black;
+        background-color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        font-size: 1.7ch;
+        cursor: pointer;
+      }
+
+      .codes-displayer .langs-selector .option:hover {
+        background-color: rgb(153, 0, 255);
+        color: rgb(0, 0, 0);
+      }
+
+      .codes-displayer .inner-area {
+        height: 80ch;
+        background-color: inherit;
+        display: flex;
+      }
+
+      .codes-displayer .inner-area .utility-options {
+        width: 5ch;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3ch;
+        border-radius: 23px 0px 0px 23px;
+        background-color: black;
+      }
+
+      .codes-displayer .inner-area .utility-options .option {
+        margin: 0.1ch;
+        padding: 2ch 0.2ch;
+        border: 0.1ch solid greenyellow;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        font-weight: 600;
+        font-size: 5ch;
+        cursor: pointer;
+      }
+
+      .codes-displayer .inner-area .utility-options .option i {
+        font-size: 5ch;
+        background-color: grey;
+      }
+
+      .codes-displayer .inner-area .code {
+        width: 100%;
+        padding: 0.2ch;
+        background-color: black;
+      }
+
+      .codes-displayer .inner-area .code textarea {
+        margin: 0.2ch;
+        padding: 1ch;
+        height: 99%;
+        width: 99%;
+        background-color: rgb(255, 255, 255);
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 1.6ch;
+        font-weight: 500;
+        letter-spacing: 0.05ch;
+      }
+
+      .codes-displayer .inner-area .level-selector {
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.5ch;
+        padding-top: 3ch;
+        border-radius: 0px 23px 23px 0px;
+        background-color: black;
+      }
+
+      .codes-displayer .inner-area .level-selector .option {
+        padding: 2ch 0.3ch;
+        margin: 0.2ch;
+        border-radius: 5px;
+        border: 0.11ch solid black;
+        background-color: black;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        font-size: 1.7ch;
+        writing-mode: vertical-lr;
+        text-orientation: mixed;
+        cursor: pointer;
+      }
+
+      .codes-displayer .inner-area .level-selector .option:hover {
+        background-color: rgb(153, 0, 255);
+        color: rgb(0, 0, 0);
+      }
+
+      .codes-displayer .output {
+        margin: 1ch;
+        padding: 1ch 3ch 1ch 1ch;
+        height: 80ch;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .codes-displayer .output .title {
+        width: 100%;
+        height: 5ch;
+        padding: 1ch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .codes-displayer .output textarea {
+        /* overflow-y: scroll; */
+        width: 100%;
+        min-height: 25ch;
+        max-height: 40ch;
+        padding: 3ch 1ch;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(240, 240, 240);
+        font-size: 1.5ch;
+        font-weight: 500;
+        letter-spacing: 0.05ch;
+      }
+    </style>
+  </body>
+</html>

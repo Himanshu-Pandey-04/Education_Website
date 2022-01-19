@@ -55,10 +55,10 @@
       <!-- Page Header start -->
       <div class="content-path">
         <div class="path">
-          <a href=""> Data Structures and Algorithms >></a>
-          <a href=""> Algorithms >></a>
-          <a href=""> Non-Linear >></a>
-          <a href=""> Prim's Shortest Path Algorithm</a>
+          <a href="#"> Data Structures and Algorithms >></a>
+          <a href="#"> Algorithms >></a>
+          <a href="/code_color.html"> Non-Linear >></a>
+          <a href="#"> Prim's Shortest Path Algorithm</a>
         </div>
       </div>
       <div class="heading">
@@ -168,11 +168,157 @@
       <div class="code-editor"></div>
 
       <div class="programs">
-        <!-- Code + Output + Output Snippets(Optional) -->
+        <div class="codes-displayer">
+          <div class="langs-selector" id="langs-selector" name="langs-selector">
+            <p class="option">C</p>
+            <p class="option">C++</p>
+            <p class="option">Java</p>
+            <p class="option">Python</p>
+            <p class="option">C#</p>
+          </div>
 
-        <div class="cpp"></div>
-        <div class="python"></div>
-        <div class="java"></div>
+          <div class="inner-area">
+            <span class="utility-options">
+              <a class="option" id="copy"><i class="fa fa-search"></i></a>
+              <a class="option" id="opt2"></a>
+              <a class="option" id="opt3"></a>
+            </span>
+
+            <span class="code">
+              <textarea id="program" name="program">
+                // C++ program to sort Linked List
+                // using Bubble Sort
+                // by swapping nodes
+    
+                #include <iostream>
+                using namespace std;
+    
+                /* structure for a node */
+                struct Node
+                {
+                    int data;
+                    struct Node* next;
+                } Node;
+    
+                /*Function to swap the nodes */
+                struct Node* swap(struct Node* ptr1, struct Node* ptr2)
+                {
+                    struct Node* tmp = ptr2->next;
+                    ptr2->next = ptr1;
+                    ptr1->next = tmp;
+                    return ptr2;
+                }
+    
+                /* Function to sort the list */
+                int bubbleSort(struct Node** head, int count)
+                {
+                    struct Node** h;
+                    int i, j, swapped;
+    
+                    for (i = 0; i <= count; i++)
+                    {
+    
+                        h = head;
+                        swapped = 0;
+    
+                        for (j = 0; j < count - i - 1; j++)
+                        {
+    
+                            struct Node* p1 = *h;
+                            struct Node* p2 = p1->next;
+    
+                            if (p1->data > p2->data)
+                            {
+    
+                                /* update the link after swapping */
+                                *h = swap(p1, p2);
+                                swapped = 1;
+                            }
+    
+                            h = &(*h)->next;
+                        }
+    
+                        /* break if the loop ended without any swap */
+                        if (swapped == 0)
+                            break;
+                    }
+                }
+    
+                /* Function to print the list */
+                void printList(struct Node* n)
+                {
+                    while (n != NULL)
+                    {
+                        cout << n->data << " -> ";
+                        n = n->next;
+                    }
+                    cout << endl;
+                }
+    
+                /* Function to insert a struct Node
+                at the beginning of a linked list */
+                void insertAtTheBegin(struct Node** start_ref, int data)
+                {
+                    struct Node* ptr1
+                        = (struct Node*)malloc(sizeof(struct Node));
+    
+                    ptr1->data = data;
+                    ptr1->next = *start_ref;
+                    *start_ref = ptr1;
+                }
+    
+                // Driver Code
+                int main()
+                {
+                    int arr[] = { 78, 20, 10, 32, 1, 5 };
+                    int list_size, i;
+    
+                    /* start with empty linked list */
+                    struct Node* start = NULL;
+                    list_size = sizeof(arr) / sizeof(arr[0]);
+    
+                    /* Create linked list from the array arr[] */
+                    for (i = 0; i < list_size; i++)
+                        insertAtTheBegin(&start, arr[i]);
+    
+                    /* print list before sorting */
+                    cout <<"Linked list before sorting\n";
+                    printList(start);
+    
+                    /* sort the linked list */
+                    bubbleSort(&start, list_size);
+    
+                    /* print list after sorting */
+                    cout <<"Linked list after sorting\n";
+                    printList(start);
+    
+                    return 0;
+                }
+    
+                // This code is contributed by
+                // Himanshu Pandey
+              </textarea>
+            </span>
+
+            <span class="level-selector">
+              <p class="option">Beginner</p>
+              <p class="option">Amateur</p>
+              <p class="option">Expert</p>
+            </span>
+          </div>
+
+          <div class="output">
+            <div class="title"><h3>Output</h3></div>
+
+            <textarea readonly id="output" class="output">
+                Linked list before sorting
+                5 -> 1 -> 32 -> 10 -> 20 -> 78 -> 
+                Linked list after sorting
+                1 -> 5 -> 10 -> 20 -> 32 -> 78 ->
+            </textarea>
+          </div>
+        </div>
+        <!-- Code + Output + Output Snippets(Optional) -->
       </div>
     </div>
   </body>
